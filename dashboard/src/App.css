@@ -1,0 +1,191 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*................................. sidebar.js............................. */
+.sidebar
+{
+  background:lightblue;
+  height:100vh;
+  -webkit-box-shadow: 16px 2px 16px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: 16px 2px 16px -9px rgba(0,0,0,0.75);
+box-shadow: 16px 2px 16px -9px rgba(0,0,0,0.75);
+color: black;
+}
+.sidebar a
+{
+  color: black;
+}
+
+.top-section
+{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.iconslinks
+{
+  display: flex;
+  gap:20px;
+  padding: 10px 10px;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-decoration: none;
+  transition: 0.5s;
+
+}
+.iconslinks:hover
+{
+  border-right: 4px solid black;
+  background:rgba(0,0,0,0.2);
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);  
+  font-size:30px;
+  transition: 0,3s;
+
+}
+.main-content
+{
+  display:flex;
+  gap: 50px;
+
+}
+.logout
+{
+  position: absolute;
+    bottom: 30px;
+    width: 100%;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+/*............................popup project..................... */
+.projectform
+{
+  background: rgba(0,0,0,0.2);
+  padding:2rem;
+  border-radius:1rem;
+
+}
+.popproject
+{
+  -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+width:50%;
+margin-right:auto;
+position: absolute;
+background:white; 
+}
+#projectresult
+{
+  color:white;
+  background:black;
+}
+.projectadded
+{
+  margin-right: 20%;
+}
+.popprojectmargin
+{
+  margin:1rem ;
+}
+
+ 
+/* ................project.js.............. */
+.table1
+{
+  
+  
+}
+.scrolleffect
+{
+  overflow: auto;
+ max-height:512px;
+ margin:auto;
+ margin-top:2rem;
+ 
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; 
+  }
+  ::-webkit-scrollbar-thumb
+  {
+  background:white;
+  }
+  /* projectcard *********************/
+  .projectcard
+  {
+    margin-top: 4rem;
+    justify-content: center;
+    -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+padding:15rem;
+  }
+
+/*................................. support.js ..................*/
+.table2
+{
+  margin-left:10rem;
+  background:lightgoldenrodyellow;
+  border-radius: 1rem;
+}
+.supportform{
+  -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+padding:1rem;
+position: absolute;
+background: white;
+z-index: 8;
+}
+
+
+/* .............................client part ......................*/
+.clientpop
+{
+  width: 80%;
+  margin: auto;
+  -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+padding: 3rem;
+}
+
+/*................................ employees........................... */
+.employpop
+{
+  width:50%;
+  margin-right:auto;
+  -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+padding:1rem;
+position:absolute;
+background:white;
+}
+.table3
+{
+  background:lightcyan;
+  border-radius:1rem;
+}
+/* findaperson client section.. */
+.findaperson
+{
+  
+  -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+padding: 2rem;
+margin-top:3rem;
+}
+  
