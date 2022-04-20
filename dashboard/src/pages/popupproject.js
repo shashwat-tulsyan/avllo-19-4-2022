@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const Popupproject = () => {
@@ -16,7 +17,8 @@ const Popupproject = () => {
      setProname({...proname,[name]:value})
     
   }
- 
+  let navigate = useNavigate();
+
   // ****************************************************
 
   const addProject =async(e)=>
@@ -44,6 +46,8 @@ const Popupproject = () => {
      //document.getElementById('projectresult').innerHTML="Your data is Successfully submitted Please close the tab";
      //navigate('/');
      toast("Data submitted succesfully");
+     navigate('/project');
+     
 
    }
    

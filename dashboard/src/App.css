@@ -98,7 +98,7 @@ background:white;
 /* ................project.js.............. */
 .table1
 {
-  
+  padding: 3rem;
   
 }
 .scrolleffect
@@ -129,7 +129,7 @@ html {
     -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
-padding:15rem;
+padding:10rem 20rem;
   }
 
 /*................................. support.js ..................*/

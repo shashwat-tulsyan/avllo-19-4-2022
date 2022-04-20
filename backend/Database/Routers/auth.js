@@ -68,6 +68,13 @@ router.get('/fetproid/:id',(req,res)=>
             res.status(400).json(err);
         })
 })
+// delete project***************
+router.delete('/deleteproject/:id', function(req, res, next) {
+    Project.remove({_id: req.params.id},function(err,project) {
+     // console.log("Deleting Product " + req.params.id);
+      res.json(project);
+    })
+  });
 // *******************************************employyyy***************************************
 
 
