@@ -38,8 +38,10 @@ const Employ = () => {
     </div>
       <div className="employadd mt-5">
       {/* {empdetail && <Empdetailpopup />} */}
+<div className='supporttable table-responsive w-auto'>
 
-   <table className="table4 table ">
+
+   <table className="table">
    
   <thead className=''>
     <tr>
@@ -49,7 +51,7 @@ const Employ = () => {
     <th scope="col">Phone Number</th>
     <th scope="col">Email Adress</th>
     <th scope="col">Employ Address</th>
-    <th scope="col">Comments</th>
+    <th scope="col">Salary</th>
     <th scope="col">Details</th>
 
 
@@ -73,7 +75,7 @@ const Employ = () => {
   <td>{comment}</td>
   <td>
   {/* <button className='btn btn-danger' onClick={()=>setEmpdetail(!empdetail)} >View</button> */}
-  <Link to={`/empdetailpopup/${_id}`}>view</Link>
+  <Link to={`/empdetailpopup/${_id}`}><button className='btn btn-sm btn-warning'>View</button></Link>
   </td>
   </tr>
   
@@ -82,7 +84,7 @@ const Employ = () => {
   })}
   </tbody>
 </table>
-
+</div>
 
    </div>
 

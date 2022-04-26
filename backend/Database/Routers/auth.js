@@ -8,18 +8,18 @@ const multer=require('multer');
 var path = require('path')
 
 
-//*******************************project************************************** */ 
+//******************************insert *project************************************** */ 
 router.post('/insertproject',async(req,res)=>
 {
  //   console.log(req.body);
-    const {pname}=req.body;
-    if(!pname)
+    const {pname,pb,sd,ed,nom, percentage}=req.body;
+    if(!pname || !pb || !sd || !ed || !nom || ! percentage)
     {
         return res.status(422).json({error:"please insert datataaa"});
     }
     try
     {
-        const project= new Project({pname});
+        const project= new Project({pname,pb,sd,ed,nom, percentage});
 const insertdata=await project.save();
 if(!insertdata)
     {
@@ -75,6 +75,35 @@ router.delete('/deleteproject/:id', function(req, res, next) {
       res.json(project);
     })
   });
+// updating project*************************************
+
+router.put('/projectupdate/:id', (req, res, next) => {
+    const project = new Project({
+    _id: req.params._id,
+    pname:req.body.pname,
+    pb:req.body.pb,
+    sd: req.body.sd,
+    ed: req.body.ed,
+    nom: req.body.nom,
+    percentage:req.body.percentage
+    });
+    console.log(project)
+    Project.findByIdAndUpdate({_id: req.params.id},project).then(
+      () => {
+        res.status(200).json({
+          message: 'Thing updated successfully!'
+        });
+        console.log(project)
+      }
+    ).catch(
+      (error) => {
+        res.status(400).json({
+          error: error
+        });
+      }
+    );
+  });
+
 // *******************************************employyyy***************************************
 
 
@@ -117,6 +146,13 @@ router.delete('/deleteproject/:id', function(req, res, next) {
    }
     
   })
+  // deleting employ****************
+  router.delete('/deleteemp/:id', function(req, res, next) {
+    Employ.remove({_id: req.params.id},function(err,employ) {
+     // console.log("Deleting Product " + req.params.id);
+      res.json(employ);
+    })
+  });
 //  fetching employee.............................................
 router.get('/fetemp',(req,res)=>
 {
@@ -172,6 +208,13 @@ if(!insertdata)
     }
 
 })
+// support delete......
+router.delete('/supportdel/:id', function(req, res, next) {
+  Support.remove({_id: req.params.id},function(err,support) {
+   // console.log("Deleting Product " + req.params.id);
+    res.json(support);
+  })
+});
 
 // ***************************************fetching support data*******************************************
 router.get('/supportdata',(req,res)=>

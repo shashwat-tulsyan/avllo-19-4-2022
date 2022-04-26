@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Popupproject = () => {
   const[proname,setProname]=useState({
-        pname:''
+        pname:'',pb:'',sd:'', ed:'',  nom:'', percentage:'',
   })
   var name,value;
   
@@ -24,7 +24,7 @@ const Popupproject = () => {
   const addProject =async(e)=>
   { 
      e.preventDefault();
-     const{pname}=proname;
+     const{pname,pb,sd,ed,nom, percentage}=proname;
     const projectRespond = await fetch('/insertproject',
    {
      method:"POST",
@@ -32,7 +32,7 @@ const Popupproject = () => {
      {
       "Content-Type":"application/json"
      },
-     body:JSON.stringify({pname}) 
+     body:JSON.stringify({pname,pb,sd,ed,nom, percentage}) 
 
    })
    const ProjectData=await projectRespond.json();
@@ -56,23 +56,60 @@ const Popupproject = () => {
 
   return (
     <>
+    <div className='poppromain'>
+
+  
     <div className='popproject'>
-        <div className='popprojectmargin '>
-        <form className="row g-3" action='/project' method='POST'>
+        <form className="row " action='/project' method='POST'>
           <span id='projectresult'> </span>
   <div className="col-md-6">
-    <label forHTML="inputEmail4" className="form-label">Project Name</label>
+    <label forHTML="" className="form-label">Project Name</label>
     <input type="text" name='pname'  value={proname.pname} 
-    onChange={handleproject} className="form-control" id="inputEmail4"/>
+    onChange={handleproject} className="form-control" id=""/>
+  </div>
+  <div className="col-md-6">
+    <label forHTML="" className="form-label">Project Budget</label>
+    <input type="text" name='pb'  value={proname.pb}
+    onChange={handleproject} className="form-control" id=""/>
+  </div>
+  <div className="col-md-6">
+    <label forHTML="" className="form-label">Star Date</label>
+    <input type="date" name='sd' placeholder='dd/mm' value={proname.sd}
+    onChange={handleproject} className="form-control" id=""/>
+  </div>
+  <div className="col-md-6">
+    <label forHTML="" className="form-label">End Date</label>
+    <input type="date" name='ed' placeholder='dd/mm' value={proname.ed}
+    onChange={handleproject} className="form-control" id=""/>
+  </div>
+  <div className="col-md-12">
+    <label forHTML="" className="form-label">Number Of Members</label>
+    <input type="text" name='nom'  value={proname.nom}
+    onChange={handleproject} className="form-control" id=""/>
+  </div>
+  <div className="col-md-12 mt-4">
+  <select className="form-select form-select" name='percentage' value={proname.percentage} onChange={handleproject} aria-label=".form-select-sm example">
+  <option selected>Set Project Completion Percentage</option>
+  <option value="10">10%</option>
+  <option value="20">20%</option>
+  <option value="30">30%</option>
+  <option value="40">40%</option>
+  <option value="50">50%</option>
+  <option value="60">60%</option>
+  <option value="70">70%</option>
+  <option value="80">80%</option>
+  <option value="90">90%</option>
+  <option value="100">100%</option>
+</select>
   </div>
    
   <div className="col-12">
-    <button type="submit"  onClick={(e)=>addProject(e)} className="mb-4 btn btn-danger" Require>AddProject</button>
+    <button type="submit"  onClick={(e)=>addProject(e)} className="mt-5 mb-4 btn btn-danger" Require>AddProject</button>
   </div>
 </form>
-        </div>
+    
 
-    </div>
+    </div>  </div>
     <ToastContainer />
 
     </>

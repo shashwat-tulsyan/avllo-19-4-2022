@@ -44,16 +44,19 @@ const Sidebar = ({children}) =>{
   return (
       <>
         <section className='main-content'>
-               <div>
-                   <motion.div animate={{width: open? "200px":"45px"}} className="sidebar">
+          <div className='row'>
+
+          
+               <div className='col-lg-2 col-sm-12'>
+                   <motion.div animate={{width: !open? "230px":"45px"}} className="sidebar">
                        <div className='top-section'>
                            <div>
-                           { open && <h3 className='logo'>~AVLLO~</h3>}
+                           { !open && <h3 className='logo'>~AVLLO~</h3>}
                                </div>
                                <div className='icons'>
-                               <span onClick={toggle}><i className="fa-solid fa-bars"></i></span>
+                               <span onClick={toggle}></span>
                                </div>
-                        
+                               {/* <i className="fa-solid fa-bars"></i> */}
 
                        </div>
                       <div className='routes'>
@@ -65,7 +68,7 @@ const Sidebar = ({children}) =>{
                            <NavLink to={nam.path} key={section.name} className="iconslinks">
                              <div className='icons'>{nam.icon}
                                 </div>
-                           {open && <div className='link'><h6> {nam.name}</h6>
+                           {!open && <div className='link'><h6> {nam.name}</h6>
                                 </div>}
                            </NavLink>
                            </>)
@@ -75,14 +78,15 @@ const Sidebar = ({children}) =>{
                             <div>
                                  <FaHome/>
                              </div>
-                             {open && <div>
+                             {!open && <div>
                                    <Link to="" >LogOut</Link>
                              </div>}
                              </div>
                    </motion.div>
                </div>
-               <div className='child'>
+               <div className='child col-lg-10 col-sm-12'>
                {children}
+               </div>
                </div>
         </section>
       

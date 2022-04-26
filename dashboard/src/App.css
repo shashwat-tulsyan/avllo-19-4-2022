@@ -49,8 +49,7 @@ color: black;
 }
 .main-content
 {
-  display:flex;
-  gap: 50px;
+  
 
 }
 .logout
@@ -62,7 +61,7 @@ color: black;
     gap: 1rem;
 }
 
-/*............................popup project..................... */
+/* ................project.js.............. */
 .projectform
 {
   background: rgba(0,0,0,0.2);
@@ -70,45 +69,19 @@ color: black;
   border-radius:1rem;
 
 }
+
 .popproject
 {
   -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
-width:50%;
-margin-right:auto;
 position: absolute;
 background:white; 
-}
-#projectresult
-{
-  color:white;
-  background:black;
-}
-.projectadded
-{
-  margin-right: 20%;
-}
-.popprojectmargin
-{
-  margin:1rem ;
+padding:2rem;
+width:60%;
+margin:auto;
 }
 
- 
-/* ................project.js.............. */
-.table1
-{
-  padding: 3rem;
-  
-}
-.scrolleffect
-{
-  overflow: auto;
- max-height:512px;
- margin:auto;
- margin-top:2rem;
- 
-}
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -121,44 +94,129 @@ html {
   {
   background:white;
   }
+
+  .supporttable{
+    width:80%;
+    height:440px;
+    overflow-y: scroll; /* Add the ability to scroll */
+    }
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .supporttable::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .supporttable {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+    /* /////// */
+    .sup{
+      width:80%;
+      height:420px;
+      overflow-y: scroll; /* Add the ability to scroll */
+      }
+      
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .sup::-webkit-scrollbar {
+          display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .sup {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    
   /* projectcard *********************/
   .projectcard
   {
-    margin-top: 4rem;
-    justify-content: center;
-    -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+  margin-top: 4rem;
+  -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+.projectupdate
+{
+  position:absolute;
+  width: 60%;
+  margin: auto;
+  background: white;
+}
+.pp
+{
+  width:90%;
+  margin: auto;
+}
+/*................................. support.js ..................*/
+
+.supportform{
+-webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
-padding:10rem 20rem;
-  }
+position: absolute;
+background: white; padding: 1rem;
+z-index: 8;
 
-/*................................. support.js ..................*/
-.table2
+}
+.ss
 {
-  margin-left:10rem;
-  background:lightgoldenrodyellow;
+   width:89%;
+   margin: auto;
+   margin-top:3rem;
+}
+.sf
+{
+  margin: auto;
+  width: 89%;
+ 
+}
+.supporttable
+{
+  background: lightcyan;
+  padding:1rem;
+  margin:5rem;
+  margin-top:2rem;
   border-radius: 1rem;
 }
-.supportform{
-  -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
-padding:1rem;
-position: absolute;
-background: white;
-z-index: 8;
+.support-top
+{
+  text-align: center;
+  background:lightsalmon;
+  font-size:1rem;
+  padding: 0.1rem;
+  border-radius:0.1rem;width:90%;
+  margin:auto;
+  margin-top:1rem;
 }
 
 
 /* .............................client part ......................*/
 .clientpop
 {
-  width: 80%;
+  width:80%;
   margin: auto;
   -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 padding: 3rem;
+}
+.finddash
+{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  margin-top:2.6rem;
+  background: rgba(0,0,0,0.2);color: black;
+  font-size:1rem;
+  padding: 0.1rem;
+  border-radius:0.1rem;
 }
 
 /*................................ employees........................... */
@@ -173,19 +231,56 @@ padding:1rem;
 position:absolute;
 background:white;
 }
-.table3
-{
-  background:lightcyan;
-  border-radius:1rem;
-}
+
 /* findaperson client section.. */
 .findaperson
 {
-  
+width: 80%;
+margin: auto;  
+-webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
+padding:2rem;
+margin-top:3rem;
+}
+/* ****************dashboard************************** */
+.dashboard
+{
+  width:90%;
+  margin:auto;
+  margin-top: 1rem;
+}
+.dash
+{
+  text-align: center;
+  background:rgba(0,0,0,0.2);
+  color: black;
+  font-size:1rem;
+  padding: 0.1rem;
+  border-radius:0.1rem;
+}
+.showproject
+{
   -webkit-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
 box-shadow: 6px 7px 14px 0px rgba(0,0,0,0.75);
-padding: 2rem;
-margin-top:3rem;
+width:60%;
+margin: auto;
 }
   
+.currentproject{
+  
+  height:250px;
+  overflow-y: scroll; /* Add the ability to scroll */
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .currentproject::-webkit-scrollbar {
+      display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .currentproject {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

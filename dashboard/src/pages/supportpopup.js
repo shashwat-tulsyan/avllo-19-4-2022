@@ -50,9 +50,9 @@ const submitSupport=async(e)=>
 }
   return (
    <>
-   <div className='supportform mt-1'>
-        <div>
-        <form className="row g-3">
+  <div className='sf'>
+  <div className='supportform'>
+  <form className="row">
   <div className="col-md-6">
     <label forhtml="inputEmail4" className="form-label">Enter your Query</label>
     <input required type="text" name='supp' value={supportdata.supp} onChange={handlesupport} className="form-control" id="inputEmail4"/>
@@ -63,11 +63,11 @@ const submitSupport=async(e)=>
   </div> 
  
     
-  <div className="col-12">
+  <div className="col-12 mt-3">
     <button type="submit" onClick={submitSupport} className="btn btn-success">Generate Token</button>
   </div>
 </form>
-        </div>
+</div>
 
     </div>    <ToastContainer />
 

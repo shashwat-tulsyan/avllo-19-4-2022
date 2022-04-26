@@ -9,8 +9,7 @@ import Profile from './pages/profile';
 import Project from './pages/project';
 import Support from './pages/support';
 import Sidebar from './components/sidebar';
-//import Deleteproject from './pages/deleteproject';
-// import Empdetail from './pages/empdetail';
+import Updateproject from './pages/updateproject';
 import Empdetailpopup from './pages/empdetailpopup';
 import Viewproject from './pages/viewproject';
 function App() {
@@ -26,7 +25,9 @@ function App() {
          <Route exact path='/project' element={<Project/>}/> 
          <Route exact path='/support' element={<Support/>}/>
          <Route path='/empdetailpopup/:id' element={<Empdetailpopup/>}/>
-         <Route path='/viewproject/:id' element={<Viewproject/>}/> 
+         <Route path='/viewproject/:id' element={<Viewproject/>}/>
+         <Route path='/updateproject/:id' element={<Updateproject/>}/>
+
          {/* <Route path='/deleteproject/:id' element={<Deleteproject/>}/> */}
  
     </Routes>

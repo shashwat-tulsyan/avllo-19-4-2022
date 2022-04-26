@@ -4,39 +4,44 @@ import React, { useState } from 'react'
 const Client = () => {
   return (
     <>
+     <div className='finddash mt-2'> 
+          <p>Find The Person</p>
+        </div>
         <div className='findaperson '>
+          
           <div>
+            
               <div className='row m-5'>
                 <div className='col-lg-4  p-5'>
                 <h5>Skills</h5>
-                  <div class="form-check">
+                  <div className="form-check">
                   
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-  <label class="form-check-label" for="flexCheckDefault">
+  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+  <label className="form-check-label" for="flexCheckDefault">
      Java
   </label>
 </div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
-  <label class="form-check-label" for="flexCheckChecked">
+<div className="form-check">
+  <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
+  <label className="form-check-label" for="flexCheckChecked">
     PHP
   </label>
 </div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
-  <label class="form-check-label" for="flexCheckChecked">
+<div className="form-check">
+  <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
+  <label className="form-check-label" for="flexCheckChecked">
     Angular
   </label>
 </div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
-  <label class="form-check-label" for="flexCheckChecked">
+<div className="form-check">
+  <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
+  <label className="form-check-label" for="flexCheckChecked">
     Python
   </label>
 </div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
-  <label class="form-check-label" for="flexCheckChecked">
+<div className="form-check">
+  <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
+  <label className="form-check-label" for="flexCheckChecked">
     C#
   </label>
 </div>
