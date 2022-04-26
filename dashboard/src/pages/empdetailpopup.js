@@ -62,10 +62,10 @@ return(
   <div className="col-12">
     <div className='empimage'>
      <img  className=''
-      src='https://fj-employer-blog.s3.amazonaws.com/employer-blog/wp-content/uploads/2020/08/25093203/benefits-of-flexible-work-for-companies-and-employees_.jpg'
+      src={`/uploads/${fetchdetails.employimage}`}
         height="180" width="180" alt='image'/>
     </div>
-  <h6>Employe Name</h6>
+<h6>Employe Name</h6>
   <h5 className="card-title mt-2 text-info">{fetchdetails.fname} {fetchdetails.lname}</h5>
   </div>       
   <div className='col-12 mt-1'>
